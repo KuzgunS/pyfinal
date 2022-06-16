@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1420</width>
+    <height>803</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Image Operator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/main.png</normaloff>icons/main.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>20</y>
+      <width>1261</width>
+      <height>839</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="MainLayout">
+     <item row="2" column="5">
+      <widget class="QLabel" name="label_output_image">
+       <property name="minimumSize">
+        <size>
+         <width>500</width>
+         <height>800</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>other assets/generate output first.png</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <widget class="QLabel" name="label_Output">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Output</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="label_input_image">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>500</width>
+         <height>800</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="statusTip">
+        <string>Save the file on a different location with a name you input</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>other assets/input a source image.png</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="label_Input">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Input</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>121</width>
+      <height>711</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="Functions_layout">
+     <item>
+      <widget class="QGroupBox" name="groupBox_Functions">
+       <property name="title">
+        <string>File</string>
+       </property>
+       <widget class="QPushButton" name="pushButton_Open_Source">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>41</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="statusTip">
+         <string>Input the source file</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/Open Source.jpg</normaloff>icons/Open Source.jpg</iconset>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_Edit">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>200</y>
+          <width>121</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Edit</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_Clear_Source">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>10</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Clear the source</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/clear source.png</normaloff>icons/clear source.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Clear_Output">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>40</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Clear the output</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/clear output.png</normaloff>icons/clear output.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Undo_Output">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>70</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Undo output</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/undo output.png</normaloff>icons/undo output.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Redo_Output">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>100</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Redo output</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/redo output.png</normaloff>icons/redo output.png</iconset>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_Conversion">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>360</y>
+          <width>120</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Conversion</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_RGB_to_Grayscale">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>20</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Convert RGB source to Grayscale</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/rgb to gray.png</normaloff>icons/rgb to gray.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_RGB_to_HSV">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>50</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Convert RGB source to HSV</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/rgb to hsv.png</normaloff>icons/rgb to hsv.png</iconset>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_Segmentation">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>450</y>
+          <width>120</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Segmentation</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_Multi_Otsu_Thresholding">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>20</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Multi-Otsu Thresholding to source</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Multi otsu.png</normaloff>icons/Multi otsu.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Chan_Vese_Segmentation">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>50</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Chan-Vese Segmentation to source</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/chan vese.png</normaloff>icons/chan vese.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Morphological_Snakes">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Morphological Snakes to source</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/morphological.png</normaloff>icons/morphological.png</iconset>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_Edge_Detection">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>570</y>
+          <width>120</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Edge Detection</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_Prewitt">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>110</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Prewitt edge detection to source</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Prewitt.png</normaloff>icons/Prewitt.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Roberts">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>20</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Roberts edge detection to source</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Roberts.png</normaloff>icons/Roberts.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Scharr">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Scharr edge detection to source</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Scharr.png</normaloff>icons/Scharr.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Sobel">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>50</y>
+           <width>31</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Sobel edge detection to source</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Sobel.png</normaloff>icons/Sobel.png</iconset>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_Save_Output">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>60</y>
+          <width>41</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="statusTip">
+         <string>Save the file with the same name and extension in the same folder</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/Save Output.png</normaloff>icons/Save Output.png</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_Save_as_Output">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>90</y>
+          <width>41</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="statusTip">
+         <string>Save the file on a different location with a name you input</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/Save As.png</normaloff>icons/Save As.png</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_Export_as_Source">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>130</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="statusTip">
+         <string>Export output</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/Export As_Source.jpg</normaloff>icons/Export As_Source.jpg</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_Export_as_Output">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>160</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="statusTip">
+         <string>Export the output</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/Export As_ Output.png</normaloff>icons/Export As_ Output.png</iconset>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1420</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuExport_As">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="statusTip">
+      <string>Export output</string>
+     </property>
+     <property name="title">
+      <string>Export As</string>
+     </property>
+     <addaction name="menu_Export_As_Source"/>
+     <addaction name="menu_Export_As_Output"/>
+    </widget>
+    <addaction name="menu_Open_Source"/>
+    <addaction name="menu_Save_Output"/>
+    <addaction name="separator"/>
+    <addaction name="menu_Save_As_Output"/>
+    <addaction name="menuExport_As"/>
+    <addaction name="separator"/>
+    <addaction name="menu_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuClear">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="statusTip">
+      <string>Clear</string>
+     </property>
+     <property name="title">
+      <string>Clear</string>
+     </property>
+     <addaction name="menu_Clear_Source"/>
+     <addaction name="menu_Clear_Output"/>
+    </widget>
+    <addaction name="menuClear"/>
+    <addaction name="menu_Undo_Output"/>
+    <addaction name="menu_Redo_Output"/>
+   </widget>
+   <widget class="QMenu" name="menuConversion">
+    <property name="title">
+     <string>Conversion</string>
+    </property>
+    <addaction name="menu_RGB_to_Grayscale"/>
+    <addaction name="menu_RGB_to_HSV"/>
+   </widget>
+   <widget class="QMenu" name="menuSegmentation">
+    <property name="title">
+     <string>Segmentation</string>
+    </property>
+    <addaction name="menu_Multi_Otsu_Thresholding"/>
+    <addaction name="menu_Chan_Vese_Segmentation"/>
+    <addaction name="menu_Morphological_Snakes"/>
+   </widget>
+   <widget class="QMenu" name="menuEdge_Detection">
+    <property name="title">
+     <string>Edge Detection</string>
+    </property>
+    <addaction name="menu_Roberts"/>
+    <addaction name="menu_Sobel"/>
+    <addaction name="menu_Scharr"/>
+    <addaction name="menu_Prewitt"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuConversion"/>
+   <addaction name="menuSegmentation"/>
+   <addaction name="menuEdge_Detection"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="menu_Open_Source">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Open Source.jpg</normaloff>icons/Open Source.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Open Source</string>
+   </property>
+   <property name="statusTip">
+    <string>Input the source file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="menu_Save_Output">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Save Output.png</normaloff>icons/Save Output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Output</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the file with the same name and extension in the same folder</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="menu_Save_As_Output">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Save As.png</normaloff>icons/Save As.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As Output</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the file on a different location with a name you input</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="menu_Exit">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/exit.jpg</normaloff>icons/exit.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="statusTip">
+    <string>Shut down Image Operator</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F4</string>
+   </property>
+  </action>
+  <action name="menu_Export_As_Source">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Export As_Source.jpg</normaloff>icons/Export As_Source.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Source</string>
+   </property>
+   <property name="statusTip">
+    <string>Export the source</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+  </action>
+  <action name="menu_Export_As_Output">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Export As_ Output.png</normaloff>icons/Export As_ Output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Output</string>
+   </property>
+   <property name="statusTip">
+    <string>Export the output</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+O</string>
+   </property>
+  </action>
+  <action name="menu_Clear_Source">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/clear source.png</normaloff>icons/clear source.png</iconset>
+   </property>
+   <property name="text">
+    <string>Source</string>
+   </property>
+   <property name="statusTip">
+    <string>Clear the source</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="menu_Clear_Output">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/clear output.png</normaloff>icons/clear output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Output</string>
+   </property>
+   <property name="statusTip">
+    <string>Clear the output</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="menu_Undo_Output">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/undo output.png</normaloff>icons/undo output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo Output</string>
+   </property>
+   <property name="statusTip">
+    <string>Undo output</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="menu_Redo_Output">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/redo output.png</normaloff>icons/redo output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo Output</string>
+   </property>
+   <property name="statusTip">
+    <string>Redo output</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="menu_RGB_to_Grayscale">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/rgb to gray.png</normaloff>icons/rgb to gray.png</iconset>
+   </property>
+   <property name="text">
+    <string>RGB to Grayscale</string>
+   </property>
+   <property name="statusTip">
+    <string>Convert RGB source to Grayscale</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="menu_RGB_to_HSV">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/rgb to hsv.png</normaloff>icons/rgb to hsv.png</iconset>
+   </property>
+   <property name="text">
+    <string>RGB to HSV</string>
+   </property>
+   <property name="statusTip">
+    <string>Convert RGB source to HSV</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="menu_Multi_Otsu_Thresholding">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Multi otsu.png</normaloff>icons/Multi otsu.png</iconset>
+   </property>
+   <property name="text">
+    <string>Multi-Otsu Thresholding</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Multi-Otsu Thresholding to source</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="menu_Chan_Vese_Segmentation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/chan vese.png</normaloff>icons/chan vese.png</iconset>
+   </property>
+   <property name="text">
+    <string>Chan-Vese Segmentation</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Chan-Vese Segmentation to source</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="menu_Morphological_Snakes">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/morphological.png</normaloff>icons/morphological.png</iconset>
+   </property>
+   <property name="text">
+    <string>Morphological Snakes</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Morphological Snakes to source</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="menu_Roberts">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Roberts.png</normaloff>icons/Roberts.png</iconset>
+   </property>
+   <property name="text">
+    <string>Roberts</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Roberts edge detection to source</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="menu_Sobel">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Sobel.png</normaloff>icons/Sobel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Sobel edge detection to source</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="menu_Scharr">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Scharr.png</normaloff>icons/Scharr.png</iconset>
+   </property>
+   <property name="text">
+    <string>Scharr</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Scharr edge detection to source</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="menu_Prewitt">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Prewitt.png</normaloff>icons/Prewitt.png</iconset>
+   </property>
+   <property name="text">
+    <string>Prewitt</string>
+   </property>
+   <property name="iconText">
+    <string>Prewitt</string>
+   </property>
+   <property name="toolTip">
+    <string>Prewitt</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Prewitt edge detection to source</string>
+   </property>
+   <property name="whatsThis">
+    <string extracomment="Implements Prewitt edge detection on the source image."/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

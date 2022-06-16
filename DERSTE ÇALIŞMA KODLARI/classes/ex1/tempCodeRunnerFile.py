@@ -1,0 +1,2 @@
+
+print(msg) #yukardakiyle aynı 
