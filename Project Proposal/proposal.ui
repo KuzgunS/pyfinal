@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1346</width>
+    <height>859</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Data Clusterer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/main.png</normaloff>icons/main.png</iconset>
+  </property>
+  <property name="statusTip">
+   <string>Cluster those data!</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_Functions">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>0</y>
+      <width>91</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Functions</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>781</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_Functions">
+      <item>
+       <widget class="QGroupBox" name="groupBox_File">
+        <property name="title">
+         <string>File</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_Open_Data">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Get some data into the program</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Open Source.jpg</normaloff>icons/Open Source.jpg</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Save_Initial_Solution">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Save Initial Solution</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Save Output.png</normaloff>icons/Save Output.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Save_Final_Solution">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Save Final Solution</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Save Output - Copy.png</normaloff>icons/Save Output - Copy.png</iconset>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_Edit">
+        <property name="title">
+         <string>Edit</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_Clear_Final_Solution">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Clear Final Solution</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/clear output.png</normaloff>icons/clear output.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Clear_Initial_Solution">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Clear Initial Solution</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/clear source.png</normaloff>icons/clear source.png</iconset>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_Clustering">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>Clustering</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_K_Means">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply K-Means Clustering</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/K means,.png</normaloff>icons/K means,.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Affinity_Propagation">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Affinity Propagation Clustering</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Affinity.png</normaloff>icons/Affinity.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Mean_Shift">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Mean-shift Clustering</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Mean shift.png</normaloff>icons/Mean shift.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Spectral_Clustering">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Spectral Clustering</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Spectral.png</normaloff>icons/Spectral.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Hierarchical_Clustering">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>140</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Hierarchical Clustering</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Hier.png</normaloff>icons/Hier.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_DBSCAN">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply DBSCAN</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/DBSCAN.png</normaloff>icons/DBSCAN.png</iconset>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_Heuristic">
+        <property name="title">
+         <string>Heuristics</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_Hill_Climbing">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Hill Climb Heuristics</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Hill Climb.png</normaloff>icons/Hill Climb.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Simulated_Anneling">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>51</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Apply Simulated Anneling Optimization</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/Simulated Annealing.png</normaloff>icons/Simulated Annealing.png</iconset>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_Initial_Solution">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>681</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Initial Solution</string>
+    </property>
+    <widget class="QLabel" name="label_Initial_Solution">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>501</width>
+       <height>401</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Path">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>501</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Path:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_data_image">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>60</y>
+       <width>631</width>
+       <height>621</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_Final_Solution">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>10</y>
+      <width>521</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Final Solution</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_Info_Panel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>710</y>
+      <width>671</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Info Panel</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_Info_Panel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>651</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_Manual_Solution">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>470</y>
+      <width>511</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Manual Solution</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_Hubs">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>231</width>
+       <height>111</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Hubs">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Hubs</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Nodes">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nodes</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Nodes">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>231</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_Results">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>30</y>
+       <width>241</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Results</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1346</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuExport_As">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Export As</string>
+     </property>
+     <addaction name="actionInitial_Solution"/>
+     <addaction name="actionFinal_Solution"/>
+    </widget>
+    <addaction name="actionOpen_Data"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_Initial_Solution"/>
+    <addaction name="actionSave_Final_Solution"/>
+    <addaction name="separator"/>
+    <addaction name="menuExport_As"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuClear">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Clear</string>
+     </property>
+     <addaction name="actionInitial_Clear_Initial_Solution"/>
+     <addaction name="actionInitial_Clear_Final_Solution"/>
+    </widget>
+    <widget class="QMenu" name="menuUndo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Undo</string>
+     </property>
+     <addaction name="actionUndo_Initial_Solution"/>
+     <addaction name="actionUndo_Final_Solution"/>
+    </widget>
+    <widget class="QMenu" name="menuRedo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Redo</string>
+     </property>
+     <addaction name="actionRedo_Initial_Solution"/>
+     <addaction name="actionRedo_Final_Solution"/>
+    </widget>
+    <addaction name="menuClear"/>
+    <addaction name="separator"/>
+    <addaction name="menuUndo"/>
+    <addaction name="menuRedo"/>
+   </widget>
+   <widget class="QMenu" name="menuClustering">
+    <property name="title">
+     <string>Clustering</string>
+    </property>
+    <addaction name="action_K_Means"/>
+    <addaction name="action_Affinity_Propagation"/>
+    <addaction name="action_Mean_shift"/>
+    <addaction name="action_Spectral_Clustering"/>
+    <addaction name="action_Hierarchical_Clustering"/>
+    <addaction name="action_DBSCAN"/>
+   </widget>
+   <widget class="QMenu" name="menuHeuristics">
+    <property name="title">
+     <string>Heuristics</string>
+    </property>
+    <addaction name="actionHill_Climbing"/>
+    <addaction name="actionSimulated_Anneling"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuClustering"/>
+   <addaction name="menuHeuristics"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_Data">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Open Source.jpg</normaloff>icons/Open Source.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Open Data</string>
+   </property>
+   <property name="statusTip">
+    <string notr="true">Get some data into the program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave_Initial_Solution">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Save Output.png</normaloff>icons/Save Output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Initial Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Save Initial Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_Final_Solution">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Save Output - Copy.png</normaloff>icons/Save Output - Copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Final Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Save Final Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionInitial_Solution">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Export As_ Output.png</normaloff>icons/Export As_ Output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Initial Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Export as Initial Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+  </action>
+  <action name="actionFinal_Solution">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Export As_ Output - Copy.png</normaloff>icons/Export As_ Output - Copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Final Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Export as Final Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+O</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/exit.jpg</normaloff>icons/exit.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="statusTip">
+    <string>Shut down the program</string>
+   </property>
+  </action>
+  <action name="actionInitial_Clear_Initial_Solution">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/clear source.png</normaloff>icons/clear source.png</iconset>
+   </property>
+   <property name="text">
+    <string>Initial Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Clear Initial Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionInitial_Clear_Final_Solution">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/clear output.png</normaloff>icons/clear output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Final Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Clear Final Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="actionUndo_Initial_Solution">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/undo output.png</normaloff>icons/undo output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo Initial Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Undo Initial Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionUndo_Final_Solution">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/undo output - Copy.png</normaloff>icons/undo output - Copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo Final Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Undo Final Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo_Initial_Solution">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/redo output.png</normaloff>icons/redo output.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo Initial Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Redo Initial Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionRedo_Final_Solution">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/redo output - Copy.png</normaloff>icons/redo output - Copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo Final Solution</string>
+   </property>
+   <property name="statusTip">
+    <string>Redo Final Solution</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Y</string>
+   </property>
+  </action>
+  <action name="action_K_Means">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/K means,.png</normaloff>icons/K means,.png</iconset>
+   </property>
+   <property name="text">
+    <string>K-Means</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply K-Means Clustering</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="action_Affinity_Propagation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Affinity.png</normaloff>icons/Affinity.png</iconset>
+   </property>
+   <property name="text">
+    <string>Affinity Propagation</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Affinity Propagation Clustering</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="action_Mean_shift">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Mean shift.png</normaloff>icons/Mean shift.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mean-shift</string>
+   </property>
+   <property name="toolTip">
+    <string>Mean-shift</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Mean-shift Clustering</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="action_Spectral_Clustering">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Spectral.png</normaloff>icons/Spectral.png</iconset>
+   </property>
+   <property name="text">
+    <string>Spectral Clustering</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Spectral Clustering</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
+  </action>
+  <action name="action_Hierarchical_Clustering">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Hier.png</normaloff>icons/Hier.png</iconset>
+   </property>
+   <property name="text">
+    <string>Hierarchical Clustering</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Hierarchical Clustering</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+5</string>
+   </property>
+  </action>
+  <action name="action_DBSCAN">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/DBSCAN.png</normaloff>icons/DBSCAN.png</iconset>
+   </property>
+   <property name="text">
+    <string>DBSCAN</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply DBSCAN</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+6</string>
+   </property>
+  </action>
+  <action name="actionHill_Climbing">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Hill Climb.png</normaloff>icons/Hill Climb.png</iconset>
+   </property>
+   <property name="text">
+    <string>Hill Climbing</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Hill Climb Heuristics</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionSimulated_Anneling">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Simulated Annealing.png</normaloff>icons/Simulated Annealing.png</iconset>
+   </property>
+   <property name="text">
+    <string>Simulated Anneling</string>
+   </property>
+   <property name="statusTip">
+    <string>Apply Simulated Anneling Optimization</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+J</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
